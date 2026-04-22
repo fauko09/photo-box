@@ -43,6 +43,8 @@ npm run build
 npm run preview -- --host 0.0.0.0 --port 4173
 ```
 
+Di Windows, jangan ubah `script` PM2 ke `src`. Gunakan `ecosystem.config.cjs` apa adanya karena file ini menjalankan `scripts/pm2-start.cjs` untuk build dan preview secara cross-platform.
+
 Perintah umum:
 
 ```bash
