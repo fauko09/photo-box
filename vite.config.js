@@ -6,11 +6,13 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 4173,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: ['photo-box.my.id', 'www.photo-box.my.id']
   },
   preview: {
     host: '0.0.0.0',
     port: 4173,
-    strictPort: true
+    strictPort: true,
+    allowedHosts: ['photo-box.my.id', 'www.photo-box.my.id']
   }
 })
