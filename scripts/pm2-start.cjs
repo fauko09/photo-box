@@ -2,10 +2,9 @@ const { execFileSync, spawn } = require('node:child_process');
 const path = require('node:path');
 
 const rootDir = path.resolve(__dirname, '..');
-const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 const viteBin = path.join(rootDir, 'node_modules', 'vite', 'bin', 'vite.js');
 
-execFileSync(npmCommand, ['run', 'build'], {
+execFileSync(process.execPath, [viteBin, 'build'], {
   cwd: rootDir,
   stdio: 'inherit',
 });
