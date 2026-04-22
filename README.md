@@ -45,6 +45,17 @@ npm run preview -- --host 0.0.0.0 --port 4173
 
 Di Windows, jangan ubah `script` PM2 ke `src`. Gunakan `ecosystem.config.cjs` apa adanya karena file ini menjalankan `scripts/pm2-start.cjs` untuk build dan preview secara cross-platform.
 
+Jika PM2 masih membaca entry lama seperti `src`, hapus proses lama dulu:
+
+```bash
+pm2 delete potobox
+pm2 delete all
+git pull origin master
+npm install
+pm2 start ecosystem.config.cjs
+pm2 save
+```
+
 Perintah umum:
 
 ```bash

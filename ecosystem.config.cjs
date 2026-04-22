@@ -2,7 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'potobox',
-      script: './scripts/pm2-start.cjs',
+      script: process.execPath,
+      args: './scripts/pm2-start.cjs',
       cwd: __dirname,
       env: {
         NODE_ENV: 'production',
