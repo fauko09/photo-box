@@ -28,6 +28,29 @@ npm run build
 
 Output production akan tersedia di folder `dist/`.
 
+## PM2
+
+Jalankan production preview dengan auto build setiap start/restart:
+
+```bash
+pm2 start ecosystem.config.cjs
+```
+
+Perintah PM2 tersebut menjalankan:
+
+```bash
+npm run build
+npm run preview -- --host 0.0.0.0 --port 4173
+```
+
+Perintah umum:
+
+```bash
+pm2 restart potobox
+pm2 logs potobox
+pm2 stop potobox
+```
+
 ## Nginx
 
 Contoh konfigurasi Nginx tersedia di `nginx.conf`. Arahkan `root` ke folder `dist` hasil build.
